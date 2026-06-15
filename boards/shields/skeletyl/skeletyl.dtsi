@@ -7,7 +7,6 @@
         zmk,physical-layout = &default_layout;
     };
 
-    // NEW: The physical layout definition
     default_layout: default_layout {
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
@@ -16,8 +15,9 @@
     };
 
     kscan0: kscan0 {
-        compatible = "zmk,matrix-gpio";
+        compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
+        wakeup-source;
     };
 
     default_transform: keymap_transform_0 {
