@@ -5,9 +5,6 @@
 };
 
 &kscan0 {
-    compatible = "zmk,matrix-gpio";
-    diode-direction = "col2row";
-
     col-gpios
         = <&gpio1 4 GPIO_ACTIVE_HIGH>  // Col 0: Inner  (104)
         , <&gpio0 11 GPIO_ACTIVE_HIGH> // Col 1: Index  (011)
