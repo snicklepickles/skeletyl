@@ -1,0 +1,25 @@
+#include "skeletyl.dtsi"
+
+&default_transform {
+    col-offset = <5>;
+};
+
+&kscan0 {
+    compatible = "zmk,matrix-gpio";
+    diode-direction = "col2row";
+
+    col-gpios
+        = <&gpio1 4 GPIO_ACTIVE_HIGH>  // Col 0: Inner  (104)
+        , <&gpio0 11 GPIO_ACTIVE_HIGH> // Col 1: Index  (011)
+        , <&gpio1 0 GPIO_ACTIVE_HIGH>  // Col 2: Middle (100)
+        , <&gpio0 24 GPIO_ACTIVE_HIGH> // Col 3: Ring   (024)
+        , <&gpio0 22 GPIO_ACTIVE_HIGH> // Col 4: Outer  (022)
+        ;
+
+    row-gpios
+        = <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 0: Top    (115)
+        , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 1: Middle (113)
+        , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 2: Bottom (111)
+        , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 3: Thumb  (010)
+        ;
+};
