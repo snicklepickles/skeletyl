@@ -2,11 +2,11 @@
 
 &kscan0 {
     col-gpios
-        = <&gpio1 15 GPIO_ACTIVE_HIGH>  // Col 0: Inner  (115)
-        , <&gpio1 13 GPIO_ACTIVE_HIGH>  // Col 1: Index  (113)
+        = <&gpio0 9  GPIO_ACTIVE_HIGH>  // Col 0: Inner  (009)
+        , <&gpio0 10 GPIO_ACTIVE_HIGH>  // Col 1: Index  (010)
         , <&gpio1 11 GPIO_ACTIVE_HIGH>  // Col 2: Middle (111)
-        , <&gpio0 10 GPIO_ACTIVE_HIGH>  // Col 3: Ring   (010)
-        , <&gpio0 9  GPIO_ACTIVE_HIGH>  // Col 4: Outer/Pinky (009)
+        , <&gpio1 13 GPIO_ACTIVE_HIGH>  // Col 3: Ring   (113)
+        , <&gpio1 15 GPIO_ACTIVE_HIGH>  // Col 4: Outer  (115)
         ;
 
     row-gpios
