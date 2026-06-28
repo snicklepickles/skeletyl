@@ -2,17 +2,17 @@
 
 &kscan0 {
     col-gpios
-        = <&gpio0 2 GPIO_ACTIVE_HIGH>  // Col 0: Outer  (002)
-        , <&gpio1 15 GPIO_ACTIVE_HIGH> // Col 1: Ring   (115)
-        , <&gpio1 13 GPIO_ACTIVE_HIGH> // Col 2: Middle (113)
-        , <&gpio1 11 GPIO_ACTIVE_HIGH> // Col 3: Index  (111)
-        , <&gpio0 10 GPIO_ACTIVE_HIGH> // Col 4: Inner  (010)
+        = <&gpio1 15 GPIO_ACTIVE_HIGH>  // Col 0: Inner  (115)
+        , <&gpio1 13 GPIO_ACTIVE_HIGH>  // Col 1: Index  (113)
+        , <&gpio1 11 GPIO_ACTIVE_HIGH>  // Col 2: Middle (111)
+        , <&gpio0 10 GPIO_ACTIVE_HIGH>  // Col 3: Ring   (010)
+        , <&gpio0 9  GPIO_ACTIVE_HIGH>  // Col 4: Outer/Pinky (009)
         ;
 
     row-gpios
-        = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 0: Top    (024)
-        , <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Row 1: Middle (100)
-        , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 2: Bottom (011)
-        , <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Row 3: Thumb  (104)
+        = <&gpio1 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 0: Top    (100)
+        , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 1: Middle (011)
+        , <&gpio1 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 2: Bottom (104)
+        , <&gpio1 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 3: Thumb  (106)
         ;
 };
